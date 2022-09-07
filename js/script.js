@@ -6,10 +6,13 @@ const getUsers = async () => {
     try {
         const response = await fetch (API_URL);
         const data = await response.json();
+        let getCompanyData = data.find(({ company: { name } }) => name === 'Johns Group');
 
-        let companyDate = data;
-        let searchCompany = companyDate.find(item => item.company.name === 'Johns Group');
-        console.log(searchCompany);
+        console.log(getCompanyData);
+
+        // let companyDate = data;
+        // let searchCompany = companyDate.find(item => item.company.name === 'Johns Group');
+        // console.log(searchCompany);
 
         // const companyData = await data.filter((comp) => {
         //     return comp.company.name === 'Johns Group';
