@@ -6,9 +6,9 @@ const getUsers = async () => {
     try {
         const response = await fetch (API_URL);
         const data = await response.json();
-        let getCompanyData = data.find(({ company: { name } }) => name === 'Johns Group');
+        let companyData = data.find(({ company: { name } }) => name === 'Johns Group');
 
-        console.log(getCompanyData);
+        console.log(companyData);
 
         // let companyDate = data;
         // let searchCompany = companyDate.find(item => item.company.name === 'Johns Group');
